@@ -31,8 +31,8 @@ class ArticleRequest extends FormRequest
 
     public function attributes()
     {
-        return[
-            'title' => 'タイトル'
+        return [
+            'title' => 'タイトル',
             'body' => '本文',
         ];
     }

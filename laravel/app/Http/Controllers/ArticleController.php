@@ -51,8 +51,6 @@ class ArticleController extends Controller
             $path = null;
         }
 
-        
-
         return redirect()->route('articles.index');
     }
 

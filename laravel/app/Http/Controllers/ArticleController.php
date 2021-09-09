@@ -43,6 +43,16 @@ class ArticleController extends Controller
             $tag = Tag::firstOrCreate(['name' => $tagName]);
             $article->tags()->attach($tag);
         });
+        $image = $request->file('image');
+        if($request->hasFile('image')){
+            $path = \storage::put('/public', $image);
+            $path = explode('/', $path);
+        }else{
+            $path = null;
+        }
+
+        
+
         return redirect()->route('articles.index');
     }
 

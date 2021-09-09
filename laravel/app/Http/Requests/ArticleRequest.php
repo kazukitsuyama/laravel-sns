@@ -27,6 +27,7 @@ class ArticleRequest extends FormRequest
             'title' => 'required|max:50',
             'body' => 'required|max:500',
             'tags' => 'json|regex:/^(?!.*\s).+$/u|regex:/^(?!.*\/).*$/u',
+            'image'=>'file | image | mimes:png,jpeg',
         ];
     }
 
